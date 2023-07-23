@@ -1,0 +1,56 @@
+[package]
+name = "named-types"
+version = "0.1.0"
+edition = "2021"
+description = "Like Display or Debug but for type names."
+
+[profile.release]
+opt-level = "s"
+strip = "debuginfo"
+
+[workspace]
+members = [
+  "named-types-derive"
+]
+
+[features]
+default = ["rust-1-70-0", "std"]
+
+## enable [`std`]
+std = []
+## enable [`alloc`]
+alloc = []
+
+## MSRV 1.70.0
+rust-1-70-0 = ["rust-1-66-0"]
+## MSRV 1.66.0
+rust-1-66-0 = ["rust-1-65-0"]
+## MSRV 1.65.0
+rust-1-65-0 = ["rust-1-64-0"]
+## MSRV 1.64.0
+rust-1-64-0 = ["rust-1-63-0"]
+## MSRV 1.63.0
+rust-1-63-0 = ["rust-1-61-0"]
+## MSRV 1.61.0
+rust-1-61-0 = ["rust-1-60-0"]
+## MSRV 1.60.0
+rust-1-60-0 = ["rust-1-59-0"]
+## MSRV 1.59.0
+rust-1-59-0 = ["rust-1-57-0"]
+## MSRV 1.57.0
+rust-1-57-0 = ["rust-1-56-0"]
+## MSRV 1.56.0
+rust-1-56-0 = ["rust-1-55-0"]
+## MSRV 1.55.0
+rust-1-55-0 = ["rust-1-54-0"]
+## MSRV 1.54.0
+rust-1-54-0 = ["rust-1-51-0"]
+## MSRV 1.51.0
+## All versions before 1.51.0 are omitted since this crate depends on const generics which are a 1.51.0 feature
+rust-1-51-0 = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+document-features = "0.2.7"
+named-types-derive = { version = "0.1.0", path = "named-types-derive" }
