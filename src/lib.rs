@@ -30,6 +30,9 @@
 
 #![cfg_attr(not(feature = "std"), no_std)]
 
+/// Derives the [`Named`] trait.
+pub use named_types_derive::Named;
+
 mod stdlib;
 use crate::stdlib::*;
 
