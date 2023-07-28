@@ -17,7 +17,7 @@ This macro can be configured by attributing a derived type with #[named(...)].
 The following options can be passed to the attribute:
 
  * rename = "..." to change the types name.
- * format = "..." to use a custom format string that accepts all non-ignored generic. Overrides rename = "..." parameters to format the types name.
+ * format = "..." to use a custom format string that accepts all non-ignored generic parameters. Overrides any rename = "..." parameters to format the types name.
  * ignore_all to ignore all generic parameters.
  * ignore = ... to ignore a generic parameter.
  * passthrough = ... to use the Named implementation of a generic parameter. Takes priority over other options.
